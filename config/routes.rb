@@ -13,6 +13,7 @@ PublicScreen::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  get '/connect', to: "home#connect"
   get '/home', to: "home#index"
   # Sample resource route with options:
   #   resources :products do
