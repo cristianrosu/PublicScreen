@@ -30,9 +30,14 @@ class DropboxController < ApplicationController
 
         account_info = client.account_info
 
-        # Show a file upload page
-        render :inline =>
-            "#{account_info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Upload' %><% end %>"
+        # # Show a file upload page
+        # render :inline =>
+        #     "#{account_info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Upload' %><% end %>"
+    
+        @root_metadata = client.metadata('/')
+        shareLink = client.media('fernanda-dorogi-716172l-poza.jpg')
+        
+        @link = shareLink["url"]
     end
 
     def upload
