@@ -6,9 +6,27 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<body onkeyup="readUnicode(event);">
 
 <%= yield %>
 
+<script type="text/javascript">
+function readUnicode(e){
+	var unicode=e.keyCode? e.keyCode : e.charCode;
+	//alert(unicode);	
+	switch(unicode)
+	{
+		case 65:
+			$('a.carousel-control.left').trigger('click');
+			break;
+		case 83:
+			$('a.carousel-control.right').trigger('click');
+			break;
+		default:
+			//do nothing for now
+	}
+}
+</script>
 </body>
 </html>
