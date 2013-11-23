@@ -24,7 +24,10 @@ PublicScreen::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  get 'dropbox/main'
+  get 'dropbox/auth_start'
+  get 'dropbox/auth_finish'
+  post "dropbox/upload"
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
