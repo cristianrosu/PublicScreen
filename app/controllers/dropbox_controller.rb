@@ -16,6 +16,7 @@
 
 require 'dropbox_sdk'
 require 'securerandom'
+require 'json'
 
 APP_KEY = "n7cldgthudkeqkl"
 APP_SECRET = "pvv7c8dmkhdo0h9"
@@ -35,9 +36,14 @@ class DropboxController < ApplicationController
         #     "#{account_info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Upload' %><% end %>"
     
         @root_metadata = client.metadata('/')
-        shareLink = client.media('fernanda-dorogi-716172l-poza.jpg')
-        
-        @link = shareLink["url"]
+        # @hash = JSON.parse @root_metadata
+        @a = []
+        @root_metadata["contents"].each do |x|  
+            if x["path"].include? ".jpg"
+                xx = x["path"] 
+                @a << client.media(xx[1,xx.length])["url"]
+            end
+        end
     end
 
     def upload

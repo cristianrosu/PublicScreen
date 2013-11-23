@@ -1,2 +1,27 @@
+<div id="headers" class="row" style="padding:24px;background:#343434;">
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">All</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">Photos</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">Video</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">Other</button>
+    </div>
+</div>
 
-<%= image_tag @link %>
+<div id="coverFlow" class="row" style="background:#454545;padding-top:12px;border-bottom:1px solid #222;">
+  <div class="ContentFlow" >
+    <div class="loadIndicator"><div class="indicator"></div></div>
+    <div class="flow">
+        <% @a.each do |aa| %>
+			<img class="item" src="<%= aa %>" title="Test image title"/>
+		<%end%>
+    </div>
+    <div class="globalCaption"></div>
+    <!-- <div class="scrollbar"><div class="slider"><div class="position"></div></div></div> -->
+  </div>
+</div>
