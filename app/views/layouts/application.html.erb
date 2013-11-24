@@ -12,6 +12,8 @@
 		<%= yield %>
 	</div>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 
 	<script type="text/javascript">
 	function readUnicode(e){
@@ -20,7 +22,7 @@
 		switch(unicode)
 		{
 			case 65:
-				$('a.carousel-control.left').trigger('click');
+
 				break;
 			case 83:
 				$('a.carousel-control.right').trigger('click');
@@ -30,5 +32,6 @@
 		}
 	}
 	</script>
+
 </body>
 </html>
