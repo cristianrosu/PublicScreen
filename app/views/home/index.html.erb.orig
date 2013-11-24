@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+<div class="row" style="padding:24px;background:#343434;">
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">All</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">Photos</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">Video</button>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <button class="btn btn-block btn-primary btn-lg">Other</button>
+    </div>
+</div>
+
+<div class="row" style="background:#454545;padding-top:12px;border-bottom:1px solid #222;">
+  <div class="ContentFlow" >
+    <div class="loadIndicator"><div class="indicator"></div></div>
+    <div class="flow">
+        <img class="item" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-ash4/1186279_467539193341877_671199551_n.jpg" title="Test image title"/>
+        <img class="item" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/1094812_10201288728252739_990985147_n.jpg"/>
+        <img class="item" src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn2/1069163_567256399979563_163873799_n.jpg" title="My cover photo"/>
+        <img class="item" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn2/1186786_669103323117406_1142300373_n.jpg" title="Foods"/>
+        <img class="item" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-prn2/968781_563238520381351_1119398687_n.jpg" title="Desingi"/>
+        <!-- Add as many items as you like. -->
+    </div>
+    <div class="globalCaption"></div>
+    <!-- <div class="scrollbar"><div class="slider"><div class="position"></div></div></div> -->
+  </div>
+</div>
+
+<script type="text/javascript">
+	 
+</script>
+=======
+<div id="qrCode" class="row">
+	<div class="card col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+		<h3 style="text-align:center">Scan the code below to connect</h3>
+		<hr>
+		<img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=<%=@ip%>,32135" />
+	</div>
+</div>
+>>>>>>> 4d0ff8ffc56edf0304938d22d24cf360256cb850

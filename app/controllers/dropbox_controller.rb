@@ -35,7 +35,7 @@ class DropboxController < ApplicationController
         # render :inline =>
         #     "#{account_info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Upload' %><% end %>"
     
-        @root_metadata = client.metadata('/')
+        @root_metadata = client.metadata('/GoogleHackathon')
         # @hash = JSON.parse @root_metadata
         @a = []
         @root_metadata["contents"].each do |x|  
